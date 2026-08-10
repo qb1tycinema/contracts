@@ -20,6 +20,9 @@ jobs:
           registry-url: "https://registry.npmjs.org"
           scope: "@qb1tycinema"
 
+      - name: Install protoc
+        run: sudo apt-get update && sudo apt-get install -y protobuf-compiler
+
       - name: Install deps
         run: yarn install --frozen-lockfile
 
