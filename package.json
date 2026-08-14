@@ -1,8 +1,11 @@
 {
   "name": "@qb1tycinema/contracts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Protobuf definitions and generated TypeScript types",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
     "proto:generate": "mkdir -p ./gen && protoc -I ./proto --plugin=protoc-gen-ts_proto=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=./gen --ts_proto_opt=nestJs=true,package=omit ./proto/*.proto"
   },
   "files": [
@@ -21,6 +24,8 @@
     "rxjs": "^7.8.2"
   },
   "devDependencies": {
-    "ts-proto": "^2.12.0"
+    "@types/node": "^26.2.0",
+    "ts-proto": "^2.12.0",
+    "typescript": "^7.0.2"
   }
 }
