@@ -26,11 +26,11 @@ jobs:
       - name: Install deps
         run: yarn install --frozen-lockfile
 
-      - name: Build
-        run: yarn run build
-
       - name: Generate TypeScript Protobuf
         run: yarn run proto:generate
+
+      - name: Build
+        run: yarn run build
 
       - name: Publish package
         run: npm publish --access public --loglevel verbose
