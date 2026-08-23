@@ -37,7 +37,7 @@ message InitEmailChangeResponse {
 message ConfirmEmailChangeRequest {
     string email = 1;
     string code = 2;
-    string user_Id = 3;
+    string user_id = 3;
 }
 
 message ConfirmEmailChangeResponse {
