@@ -1,4 +1,4 @@
-export interface PhoneChange {
+export interface PhoneChangeEvent {
     phone: string
     code: string
 }
