@@ -1,6 +1,6 @@
 {
   "name": "@qb1tycinema/contracts",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Protobuf definitions and generated TypeScript types",
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
@@ -30,11 +30,13 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@nestjs/microservices": "^11.1.28",
     "rxjs": "^7.8.2"
   },
   "devDependencies": {
+    "@nestjs/microservices": "^11.1.28",
+    "rxjs": "^7.8.2",
     "@types/node": "^26.2.0",
     "ts-proto": "^2.12.0",
     "typescript": "^7.0.2"
