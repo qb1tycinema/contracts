@@ -6,10 +6,20 @@ import "google/protobuf/empty.proto";
 
 service CategoryService {
     rpc GetAllCategories (google.protobuf.Empty) returns (GetAllCategoriesResponse);
+    rpc CreateCategory (CreateCategoryRequest) returns (CreateCategoryResponse);
 }
 
 message GetAllCategoriesResponse {
     repeated Category categories = 1;
+}
+
+message CreateCategoryRequest {
+    string title = 1;
+    string slug = 2;
+}
+
+message CreateCategoryResponse {
+    Category category =  1;
 }
 
 message Category {

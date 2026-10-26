@@ -7,6 +7,7 @@ import "google/protobuf/timestamp.proto";
 service MovieService {
     rpc ListMovies (ListMoviesRequest) returns (ListMoviesResponse);
     rpc GetMovie (GetMovieRequest) returns (GetMovieResponse);
+    rpc CreateMovie (CreateMovieRequest) returns (CreateMovieResponse);
 }
 
 message ListMoviesRequest {
@@ -27,6 +28,24 @@ message GetMovieRequest {
 }
 
 message GetMovieResponse {
+    MovieDetails movie = 1;
+}
+
+message CreateMovieRequest {
+    string title = 1;
+    string slug = 2;
+    string description = 3;
+    string poster = 4;
+    optional string banner = 5;
+    int32 duration = 6;
+    int32 release_year = 7;
+    google.protobuf.Timestamp release_date = 8;
+    string rating_age = 9;
+    repeated string country = 10;
+    string category_id = 11;
+}
+
+message CreateMovieResponse {
     MovieDetails movie = 1;
 }
 
