@@ -47,7 +47,7 @@ message CreateMovieRequest {
     int32 duration = 6;
     int32 release_year = 7;
     google.protobuf.Timestamp release_date = 8;
-    string rating_age = 9;
+    int32 rating_age = 9;
     repeated string country = 10;
     string category_id = 11;
 }
@@ -61,7 +61,7 @@ message Movie {
     string title = 2;
     string slug = 3;
     string poster = 4;
-    string rating_age = 5;
+    int32 rating_age = 5;
     google.protobuf.Timestamp release_date = 6;
 }
 
@@ -73,8 +73,8 @@ message MovieDetails {
     string poster = 5;
     string banner = 6;
     int32 duration = 7;
-    string rating_age = 8;
-    string country = 9;
+    int32 rating_age = 8;
+    repeated string country = 9;
     google.protobuf.Timestamp release_date = 10;
 }
 
